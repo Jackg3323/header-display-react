@@ -1,9 +1,10 @@
+import { useState } from "react";
 import "./App.css";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 
 function App() {
-  const myName = "Mark";
-  return <Header name={myName} />;
+  const name = useState("Mark");
+  return <Header name={name} />;
 }
 
 export default App;
