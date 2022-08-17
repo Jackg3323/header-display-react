@@ -8,13 +8,13 @@ import Title from "./components/Title/Title";
 const imgUrl = "https://i.imgur.com/yXOvdOSs.jpg";
 
 function App() {
-  const [name, setName] = useState("User");
+  const [name, setName] = useState("");
   return (
     <>
       <Title />
       <Header name={name} />
       <Form setName={setName} />
-      <Profile name={name} imgUrl={imgUrl} />
+      {name && <Profile name={name} imgUrl={imgUrl} />}
     </>
   );
 }
