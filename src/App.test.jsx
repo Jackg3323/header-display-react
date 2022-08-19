@@ -20,5 +20,9 @@ it("updates the name in the header whenever we submit the form", () => {
   userEvent.type(input, nameInput);
   userEvent.click(submitBtn);
 
+  const h2 = screen.getByRole("heading", { level: 2 });
+  screen.getAllByAltText(nameInput);
+
   expect(h1.textContent).toContain(nameInput);
+  expect(h2.textContent).toContain(nameInput);
 });
