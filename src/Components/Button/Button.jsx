@@ -1,14 +1,23 @@
 import PropTypes from "prop-types";
 
-export default function Button({ label, changeHandler }) {
+export default function Button({ txt, changeHandler, bgColor }) {
   return (
-    <button type="button" onClick={changeHandler}>
-      Click Me {label}
+    <button
+      type="button"
+      onClick={changeHandler}
+      className={`rounded text-white bg-${bgColor}-500`}
+    >
+      Click Me {txt}
     </button>
   );
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
+  txt: PropTypes.string.isRequired,
+  bgColor: PropTypes.string,
   changeHandler: PropTypes.func.isRequired,
+};
+
+Button.defaultProps = {
+  bgColor: "green",
 };
