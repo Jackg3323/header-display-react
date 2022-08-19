@@ -2,9 +2,10 @@
 
 exports[`renders correctly 1`] = `
 <h1
-  className="text-3xl"
+  className="my-8 text-center text-3xl"
+  label="title"
 >
-   Oh, Hi 
+  Oh, Hi 
   Mark
 </h1>
 `;
