@@ -5,16 +5,16 @@ import Button from "./Button";
 
 it("renders correctly", () => {
   const tree = renderer
-    .create(<Button changeHandler={() => {}} txt="Click Me" />)
+    .create(<Button clickHandler={() => {}} txt="Click Me" />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-it("calls the change handler whenver the button is clicked", () => {
-  const mockChangeHandler = jest.fn();
+it("calls the change handler whenever the button is clicked", () => {
+  const mockClickHandler = jest.fn();
 
-  render(<Button changeHandler={mockChangeHandler} />);
+  render(<Button changeHandler={mockClickHandler} />);
   userEvent.onClick(screen.getByRole("button"));
 
-  expect(mockChangeHandler).toHaveBeenCalled();
+  expect(mockClickHandler).toHaveBeenCalled();
 });

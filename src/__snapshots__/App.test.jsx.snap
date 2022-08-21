@@ -66,5 +66,26 @@ Array [
       $199.99
     </li>
   </ul>,
+  <button
+    className="rounded text-white bg-red-500 px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    Rock
+  </button>,
+  <button
+    className="rounded text-white bg-yellow-500 px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    Paper
+  </button>,
+  <button
+    className="rounded text-white bg-green-500 px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    Scissors
+  </button>,
 ]
 `;

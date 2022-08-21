@@ -1,3 +1,4 @@
+import Button from "components/Button/Button";
 import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form/Form";
@@ -41,6 +42,21 @@ const products = [
   { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" },
 ];
 
+const choices = [
+  {
+    txt: "Rock",
+    bgColor: "red",
+  },
+  {
+    txt: "Paper",
+    bgColor: "yellow",
+  },
+  {
+    txt: "Scissors",
+    bgColor: "green",
+  },
+];
+
 function App() {
   const [name, setName] = useState("");
   return (
@@ -50,6 +66,16 @@ function App() {
       <Form setName={setName} />
       {name && <Profile name={name} imgUrl={imgUrl} />}
       <Products products={products} />
+      {choices.map((choice) => (
+        <Button
+          key={choice.txt}
+          txt={choice.txt}
+          bgColor={choice.bgColor}
+          clickHandler={() => {
+            console.log("click");
+          }}
+        />
+      ))}
     </>
   );
 }
